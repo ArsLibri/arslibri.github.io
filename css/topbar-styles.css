@@ -10,12 +10,13 @@
 }
 #top-bar-menu {
     position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    height: 75px;
+    top:64px;
+    right:-300px;
+    height: 200px;
+    width: 300px;
     background: #1a1b1c;
-    border-bottom: solid 1px #AEAEAE;
+    transition:right 0.25s;
+    border-top:solid 1px #AEAEAE;
 }
 #top-bar-toggle {
     position: absolute;

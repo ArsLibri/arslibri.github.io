@@ -1,11 +1,11 @@
-var topbartoggled = false;
+var menutoggled = false;
 var currentpage = 1;
 
 var DOMtopbartoggle = document.getElementById('top-bar-toggle');
 var DOMtopbar = document.getElementById('top-bar');
-var DOMtopbarmenuactivator = document.getElementById('top-bar-menu-activator');
+var DOMtopbarmenu = document.getElementById('top-bar-menu');
 
 DOMtopbartoggle.onclick = function() {
-    topbartoggled = !topbartoggled;
-    DOMtopbar.style.top = (75 * topbartoggled) + 'px';
+    menutoggled = !menutoggled;
+    DOMtopbarmenu.style.right = (-300 * !menutoggled) + 'px';
 };
