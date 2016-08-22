@@ -1,0 +1,57 @@
+#top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #1a1b1c;
+    transition: top 0.25s;
+    white-space: nowrap;
+}
+#top-bar-menu {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 75px;
+    background: #1a1b1c;
+    border-bottom: solid 1px #AEAEAE;
+}
+#top-bar-menu-activator {
+    display: inline-block;
+    height: 75px;
+    line-height: 75px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.top-bar-menu-item {
+    display: inline-block;
+    color: #AEAEAE;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 0 19px;
+}
+#top-bar-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url('../res/HorizontalBars.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 32px 32px;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+}
+#top-bar-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 64px;
+    line-height: 64px;
+    color: #AEAEAE;
+    font-size: 20px;
+    padding-left: 22px;
+}
