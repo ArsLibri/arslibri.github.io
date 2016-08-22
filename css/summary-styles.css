@@ -1,0 +1,29 @@
+#summary {
+    position: absolute;
+    top: 64px;
+    left: 100%;
+    width: 100%;
+    bottom: 0;
+    transition: left 0.25s;
+    border-top: solid 1px #AEAEAE;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 30px;
+}
+#summary-title {
+    font-size: 24px;
+    font-family: 'Lato-Regular';
+    font-weight: bold;
+}
+.summary-item-h {
+    padding: 5.5px 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    background-image: url('../res/summary-item-middle.png');
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 15px 35px;
+}
+.summary-item-h-last {
+    background-image: url('../res/summary-item-last.png');
+}

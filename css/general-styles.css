@@ -15,4 +15,5 @@ body, html, #wrapper {
 }
 #wrapper {
     position: relative;
+    overflow: hidden;
 }
