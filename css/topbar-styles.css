@@ -17,22 +17,6 @@
     background: #1a1b1c;
     border-bottom: solid 1px #AEAEAE;
 }
-#top-bar-menu-activator {
-    display: inline-block;
-    height: 75px;
-    line-height: 75px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-.top-bar-menu-item {
-    display: inline-block;
-    color: #AEAEAE;
-    font-size: 24px;
-    text-transform: uppercase;
-    margin: 0 19px;
-}
 #top-bar-toggle {
     position: absolute;
     right: 0;
