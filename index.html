@@ -8,6 +8,7 @@
     <link rel='stylesheet' type='text/css' href='css/general-styles.css'>
     <link rel='stylesheet' type='text/css' href='css/topbar-styles.css'>
     <link rel='stylesheet' type='text/css' href='css/summary-styles.css'>
+    <link rel='stylesheet' type='text/css' href='css/page-styles.css'>
     <title>Book Viewer Alpha v0.1</title>
 </head>
 
@@ -17,13 +18,28 @@
             <div id='top-bar-title'>Book Dummy</div>
             <div id='top-bar-toggle'></div>
         </div>
+        <div id='page-wrapper'>
+            <div id='page-toolbar'>
+                <div id='page-toolbar-leftcounter'>
+                    <input type='text' value='1' autocomplete='off'>
+                </div>
+                <div id='page-toolbar-rightcounter'>89</div>
+                <div id='page-toolbar-counter'></div>
+            </div>
+            <div id='page'></div>
+        </div>
         <div id='summary'>
-            <div id='summary-title'>Cuprins:</div>
+            <div id='summary-title'>Cuprins</div>
             <div class='summary-item-h'>Introducere</div>
             <div class='summary-item-h'>Pagina 1</div>
             <div class='summary-item-h'>Pagina 1</div>
             <div class='summary-item-h'>Pagina 1</div>
-            <div class='summary-item-h'>Pagina 1</div>
+            <div class='summary-item-h'>
+                Pagina 1
+                <div class='summary-item-l'>Pagina 1.0</div>
+                <div class='summary-item-l'>Pagina 1.0</div>
+                <div class='summary-item-l summary-item-l-last'>Pagina 1.0</div>
+            </div>
             <div class='summary-item-h summary-item-h-last'>Pagina 1</div>
         </div>
     </div>

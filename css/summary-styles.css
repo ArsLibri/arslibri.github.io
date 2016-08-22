@@ -15,15 +15,21 @@
     font-family: 'Lato-Regular';
     font-weight: bold;
 }
-.summary-item-h {
+.summary-item-h, .summary-item-l {
     padding: 5.5px 20px;
     margin-left: 10px;
-    font-size: 20px;
     background-image: url('../res/summary-item-middle.png');
-    background-position: left center;
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: 15px 35px;
+    background-size: 15px auto;
+    overflow: hidden;
 }
 .summary-item-h-last {
+    background-image: url('../res/summary-item-last.png');
+}
+.summary-item-l {
+    margin-left: 20px;
+}
+.summary-item-l-last {
     background-image: url('../res/summary-item-last.png');
 }
