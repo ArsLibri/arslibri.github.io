@@ -66,5 +66,6 @@
     margin-left: -10px;
     border-radius: 10px;
     box-shadow: 0 0 4px #AEAEAE;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
+    transition: background-color 0.25s;
 }

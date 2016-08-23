@@ -10,6 +10,7 @@ DOMpagetoolbarcounterhandle.onmousedown = function(e) {
     dragging = true;
     startdrag = e.clientX;
     startleft = parseInt(DOMpagetoolbarcounterhandle.style.left.slice(0, -2));
+    DOMpagetoolbarcounterhandle.style.backgroundColor = '#EAEAEA';
 };
 DOMwrapper.onmousemove = function(e) {
     if (dragging) {
@@ -30,10 +31,12 @@ DOMwrapper.onmouseout = function(e) {
     var targetnode = e.relatedTarget || e.toElement;
     if (!targetnode || targetnode.nodeName == 'HTML') {
         dragging = false;
+        DOMpagetoolbarcounterhandle.style.backgroundColor = '#FFFFFF';
     }
 };
 DOMwrapper.onmouseup = function(e) {
     dragging = false;
+    DOMpagetoolbarcounterhandle.style.backgroundColor = '#FFFFFF';
 };
 DOMpagetoolbarleftcounterinput.onfocus = function() {
     var initial = this.value;
