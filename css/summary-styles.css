@@ -3,9 +3,10 @@
     top: 64px;
     left: 100%;
     width: 100%;
-    bottom: 0;
+    bottom: 64px;
     transition: left 0.25s;
     border-top: solid 1px #AEAEAE;
+    border-bottom: solid 1px #AEAEAE;
     font-size: 20px;
     overflow: hidden;
     padding: 30px;

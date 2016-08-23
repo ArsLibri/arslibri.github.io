@@ -1,0 +1,16 @@
+#pages-wrapper {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#pages-toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: #FAFAFA;
+    box-shadow: 0 0 4px #AEAEAE;
+}

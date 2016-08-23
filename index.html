@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' href='css/topbar-styles.css'>
     <link rel='stylesheet' type='text/css' href='css/summary-styles.css'>
     <link rel='stylesheet' type='text/css' href='css/page-styles.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <title>Book Viewer Alpha v0.1</title>
 </head>
 
@@ -16,7 +17,16 @@
     <div id='wrapper'>
         <div id='top-bar'>
             <div id='top-bar-title'>Book Dummy</div>
-            <div id='top-bar-toggle'></div>
+            <div id='top-bar-toggle'>
+                <div id='top-bar-icon'>
+                    <div id='top-bar-icon-top'></div>
+                    <div id='top-bar-icon-middle'></div>
+                    <div id='top-bar-icon-bottom'></div>
+                </div>
+            </div>
+        </div>
+        <div id='pages-wrapper'>
+            <div id='pages-toolbar'></div>
         </div>
         <div id='summary'>
             <div id='summary-title'>Cuprins</div>
