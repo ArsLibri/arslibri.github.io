@@ -21,12 +21,14 @@
         <div id='page-wrapper'>
             <div id='page-toolbar'>
                 <div id='page-toolbar-leftcounter'>
-                    <input type='text' value='1' autocomplete='off'>
+                    <input type='text' value='1' autocomplete='off' id='page-toolbar-leftcounter-input'>
                 </div>
                 <div id='page-toolbar-rightcounter'>89</div>
-                <div id='page-toolbar-counter'></div>
+                <div id='page-toolbar-counter'>
+                    <div id='page-toolbar-counter-handle' style='left:0px;'></div>
+                </div>
             </div>
-            <div id='page'></div>
+            <div id='page '></div>
         </div>
         <div id='summary'>
             <div id='summary-title'>Cuprins</div>
@@ -44,6 +46,7 @@
         </div>
     </div>
     <script src='js/topbar-scripts.js'></script>
+    <script src='js/page-scripts.js'></script>
 </body>
 
 </html>
