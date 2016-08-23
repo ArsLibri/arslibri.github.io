@@ -13,13 +13,14 @@
     background-color: #FFFFFF;
 }
 #summary-title {
-    font-size: 24px;
     font-family: 'Lato-Regular';
     font-weight: bold;
+    font-size: 20px;
 }
 .summary-item-h, .summary-item-l {
     padding: 5.5px 20px;
     margin-left: 10px;
+    font-size: 16px;
     background-image: url('../res/summary-item-middle.png');
     background-position: left top;
     background-repeat: no-repeat;

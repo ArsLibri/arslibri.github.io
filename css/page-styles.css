@@ -14,3 +14,15 @@
     background: #FAFAFA;
     box-shadow: 0 0 4px #AEAEAE;
 }
+.dynamic-page {
+    position: absolute;
+    top: 32px;
+    bottom: 96px;
+    left: 32px;
+    right: 50%;
+}
+#dynamic-page-1-img {
+    width: 100%;
+    height: 100%;
+}
+#dynamic-page-1, #dynamic-page-2, #dynamic-page-3, #dynamic-page-4, #dynamic-page-5 {}
