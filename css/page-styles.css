@@ -1,11 +1,12 @@
 #pages-wrapper {
     position: absolute;
-    top: 64px;
-    bottom: 0;
+    top: 96px;
+    bottom: 96px;
     left: 0;
     right: 0;
+    white-space: nowrap;
 }
-#pages-toolbar {
+#toolbar {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -14,15 +15,14 @@
     background: #FAFAFA;
     box-shadow: 0 0 4px #AEAEAE;
 }
-.dynamic-page {
+#left-page, #right-page {
     position: absolute;
-    top: 32px;
-    bottom: 96px;
-    left: 32px;
+    bottom: 0;
+    top: 0;
+}
+#left-page {
     right: 50%;
 }
-#dynamic-page-1-img {
-    width: 100%;
-    height: 100%;
+#right-page {
+    left: 50%;
 }
-#dynamic-page-1, #dynamic-page-2, #dynamic-page-3, #dynamic-page-4, #dynamic-page-5 {}

@@ -7,12 +7,19 @@ var activepages = {
     left: 1,
     right: 2
 };
-var dualpagemode = true;
+var totalpages = 6;
+var dualpagemode = false;
+var olddualpagemode = false;
 
 function resizer() {
     var pageswrapper = document.getElementById('pages-wrapper');
     dualpagemode = pageswrapper.offsetWidth / pageswrapper.offsetHeight < 2 * ratio;
-    console.log(dualpagemode);
+    if (dualpagemode) {
+
+    } else {
+
+
+    }
 }
 
 window.addEventListener('resize', function() {
