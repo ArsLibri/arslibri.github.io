@@ -9,7 +9,7 @@ var activepages = {
 };
 var totalpages = 6;
 var dualpagemode = false;
-var olddualpagemode = false;
+var olddualpagemode = 'toset';
 
 var DOMpageleft = document.getElementById('page-left');
 var DOMpageright = document.getElementById('page-right');
@@ -24,8 +24,9 @@ function getPageLink(page) {
 function resizer() {
 
     dualpagemode = !(DOMpageswrapper.offsetWidth / DOMpageswrapper.offsetHeight < 2 * ratio);
+    console.log(dualpagemode);
     if (dualpagemode) {
-        if (!olddualpagemode) {
+        if (olddualpagemode == 'toset' || !olddualpagemode) {
             DOMpageright.style.display = 'block';
             DOMpageleft.style.right = '50%';
             DOMpageleftimg.style.backgroundPosition = 'right center';
@@ -33,7 +34,7 @@ function resizer() {
         //DOMpageleftimg.style.width = (DOMpageleftimg.offsetHeight * ratio) + 'px';
         //DOMpagerightimg.style.width = DOMpageleftimg.style.width;
     } else {
-        if (olddualpagemode) {
+        if (olddualpagemode == 'toset' || olddualpagemode) {
             DOMpageright.style.display = 'none';
             DOMpageleft.style.right = '0';
             DOMpageleftimg.style.backgroundPosition = 'center center';
@@ -54,8 +55,7 @@ document.addEventListener('keydown', function(e) {
     switch (e.keyCode) {
         case '37': //left
         case 37:
-            if (dualpagemode) updatePage(activepages.left - 2);
-            else updatePage(activepages.left - 1);
+            scrollLeft();
             break;
         case '38': //up
         case 38:
@@ -63,8 +63,7 @@ document.addEventListener('keydown', function(e) {
             break;
         case '39': //right
         case 39:
-            if (dualpagemode) updatePage(activepages.left + 2);
-            else updatePage(activepages.left + 1);
+            scrollRight();
             break;
         case '40': //down
         case 40:
@@ -73,7 +72,18 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+function scrollLeft() {
+    if (dualpagemode) updatePage(activepages.left - 2);
+    else updatePage(activepages.left - 1);
+}
+
+function scrollRight() {
+    if (dualpagemode) updatePage(activepages.left + 2);
+    else updatePage(activepages.left + 1);
+}
+
 function updatePage(newpage) {
+    if (newpage < 1) return;
     if (newpage) {
         newpage = newpage - (newpage + 1) % 2;
         activepages.left = newpage;
