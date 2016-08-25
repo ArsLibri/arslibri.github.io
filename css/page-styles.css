@@ -6,15 +6,6 @@
     right: 0;
     white-space: nowrap;
 }
-#toolbar {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 64px;
-    background: #FAFAFA;
-    box-shadow: 0 0 4px #AEAEAE;
-}
 #page-left, #page-right {
     position: absolute;
     bottom: 0;
