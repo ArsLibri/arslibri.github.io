@@ -48,6 +48,31 @@ window.addEventListener('resize', function() {
     resizer();
 });
 
+document.addEventListener('keydown', function(e) {
+    e = e || window.event;
+    console.log(e.keyCode);
+    switch (e.keyCode) {
+        case '37': //left
+        case 37:
+            if (dualpagemode) updatePage(activepages.left - 2);
+            else updatePage(activepages.left - 1);
+            break;
+        case '38': //up
+        case 38:
+
+            break;
+        case '39': //right
+        case 39:
+            if (dualpagemode) updatePage(activepages.left + 2);
+            else updatePage(activepages.left + 1);
+            break;
+        case '40': //down
+        case 40:
+            break;
+
+    }
+});
+
 function updatePage(newpage) {
     if (newpage) {
         newpage = newpage - (newpage + 1) % 2;
