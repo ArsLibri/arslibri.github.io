@@ -7,7 +7,7 @@ var DOMtopbartoggletop = document.getElementById('top-bar-icon-top');
 var DOMtopbartogglemiddle = document.getElementById('top-bar-icon-middle');
 var DOMtopbartogglebottom = document.getElementById('top-bar-icon-bottom');
 
-DOMtopbartoggle.onclick = function() {
+function simulateToggle() {
     menutoggled = !menutoggled;
     DOMsummary.style.left = (100 * !menutoggled) + '%';
     if (menutoggled) {
@@ -41,4 +41,8 @@ DOMtopbartoggle.onclick = function() {
             });
         }
     }
+}
+
+DOMtopbartoggle.onclick = function() {
+    simulateToggle();
 };

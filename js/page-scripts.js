@@ -17,6 +17,10 @@ var DOMpageswrapper = document.getElementById('pages-wrapper');
 var DOMpageleftimg = document.getElementById('page-left-img');
 var DOMpagerightimg = document.getElementById('page-right-img');
 
+function getPageLink(page) {
+    return "https://placeholdit.imgix.net/~text?txtsize=110&txt=" + page + "&w=1000&h=1465";
+}
+
 function resizer() {
 
     dualpagemode = !(DOMpageswrapper.offsetWidth / DOMpageswrapper.offsetHeight < 2 * ratio);
@@ -44,7 +48,12 @@ window.addEventListener('resize', function() {
     resizer();
 });
 
-function loadPage(active) {
-    DOMpageleftimg.style.backgroundImage = 'url(var/page' + active + '.jpg)';
-    DOMpagerightimg.style.backgroundImage = 'url(var/page' + (active + 1) + '.jpg)';
+function updatePage(newpage) {
+    if (newpage) {
+        newpage = newpage - (newpage + 1) % 2;
+        activepages.left = newpage;
+        activepages.right = newpage + 1;
+    }
+    DOMpageleftimg.style.backgroundImage = 'url(' + getPageLink(activepages.left) + ')';
+    DOMpagerightimg.style.backgroundImage = 'url(' + getPageLink(activepages.right) + ')';
 }

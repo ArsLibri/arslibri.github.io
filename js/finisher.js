@@ -1,4 +1,5 @@
 window.onload = function() {
-    loadPage(activepages.left);
+    updatePage();
     resizer();
+    addonclicks();
 }
