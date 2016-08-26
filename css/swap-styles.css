@@ -1,0 +1,24 @@
+#swapper-left, #swapper-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40px;
+    height: 140px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#swapper-left {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 4px 0 5px #AEAEAE;
+    background-image: url('../var/left-arrow.png');
+}
+#swapper-right {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-shadow: -4px 0 5px #AEAEAE;
+}

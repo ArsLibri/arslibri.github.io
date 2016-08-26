@@ -9,8 +9,8 @@
 }
 #toolbar-dragger {
     position: absolute;
-    left: 75px;
-    right: 75px;
+    left: 275px;
+    right: 275px;
     height: 64px;
 }
 #toolbar-dragger-line {
@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     top: 30px;
-    height: 2px;
+    height: 7px;
     box-shadow: 0 0 1px #AEAEAE;
 }
 #toolbar-dragger-anchor {

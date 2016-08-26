@@ -24,22 +24,23 @@ function getPageLink(page) {
 function resizer() {
 
     dualpagemode = !(DOMpageswrapper.offsetWidth / DOMpageswrapper.offsetHeight < 2 * ratio);
-    console.log(dualpagemode);
     if (dualpagemode) {
         if (olddualpagemode == 'toset' || !olddualpagemode) {
             DOMpageright.style.display = 'block';
             DOMpageleft.style.right = '50%';
+            DOMpageleft.style.left = 'auto';
             DOMpageleftimg.style.backgroundPosition = 'right center';
         }
-        //DOMpageleftimg.style.width = (DOMpageleftimg.offsetHeight * ratio) + 'px';
-        //DOMpagerightimg.style.width = DOMpageleftimg.style.width;
+        DOMpageleft.style.width = DOMpageswrapper.offsetHeight * ratio + 'px';
+        DOMpageright.style.width = DOMpageswrapper.offsetHeight * ratio + 'px';
     } else {
         if (olddualpagemode == 'toset' || olddualpagemode) {
             DOMpageright.style.display = 'none';
             DOMpageleft.style.right = '0';
+            DOMpageleft.style.left = '0';
             DOMpageleftimg.style.backgroundPosition = 'center center';
         }
-        //DOMpageleftimg.style.width = DOMpageleftimg.offsetHeight * ratio;
+        DOMpageleft.style.width = (DOMpageswrapper.offsetHeight - 128) * ratio;
     }
 
     olddualpagemode = dualpagemode;

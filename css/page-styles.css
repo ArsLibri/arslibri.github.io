@@ -10,15 +10,13 @@
     position: absolute;
     bottom: 0;
     top: 0;
+    margin: auto;
 }
 #page-left {
     right: 50%;
-    left: 0;
-    text-align: right;
 }
 #page-right {
     left: 50%;
-    right: 0;
     background-position: left center;
 }
 #page-left-img, #page-right-img {
