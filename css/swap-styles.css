@@ -21,4 +21,5 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     box-shadow: -4px 0 5px #AEAEAE;
+    background-image: url('../var/right-arrow.png');
 }
