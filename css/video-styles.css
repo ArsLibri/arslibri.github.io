@@ -1,0 +1,9 @@
+.video-wrapper {
+    position: absolute;
+}
+
+.play-video {
+    background-image: url('var/play.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}

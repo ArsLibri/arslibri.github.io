@@ -15,6 +15,8 @@ var DOMpageleft = document.getElementById('page-left');
 var DOMpageright = document.getElementById('page-right');
 var DOMpageswrapper = document.getElementById('pages-wrapper');
 var DOMpageleftimg = document.getElementById('page-left-img');
+var DOMpageleftcontent = document.getElementById('page-left-content');
+var DOMpagerightcontent = document.getElementById('page-right-content');
 var DOMpagerightimg = document.getElementById('page-right-img');
 var DOMwrapper = document.getElementById('wrapper');
 var DOMtoolbardraggerlineloaded = document.getElementById('toolbar-dragger-line-loaded');
@@ -99,6 +101,10 @@ function setPage(newpage) {
         activepages.right = newpage + 1;
         DOMpageleftimg.style.backgroundImage = getPageLink(activepages.left);
         DOMpagerightimg.style.backgroundImage = getPageLink(activepages.right);
+        if (pageInner[activepages.left]) DOMpageleftcontent.innerHTML = pageInner[activepages.left];
+        else DOMpageleftcontent.innerHTML = '';
+        if (pageInner[activepages.right]) DOMpagerightcontent.innerHTML = pageInner[activepages.right];
+        else DOMpagerightcontent.innerHTML = '';
         DOMtoolbardraggerlineloaded.style.right = (100 - (activepages.right / totalpages) * 100) + '%';
 
     } else {
