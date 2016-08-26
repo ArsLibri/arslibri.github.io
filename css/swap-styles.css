@@ -8,18 +8,19 @@
     background-color: #FFFFFF;
     background-repeat: no-repeat;
     background-position: center center;
+    cursor: pointer;
 }
 #swapper-left {
     left: 0;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 4px 0 5px #AEAEAE;
+    box-shadow: 4px 0 4px #AEAEAE;
     background-image: url('../var/left-arrow.png');
 }
 #swapper-right {
     right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    box-shadow: -4px 0 5px #AEAEAE;
+    box-shadow: -4px 0 4px #AEAEAE;
     background-image: url('../var/right-arrow.png');
 }

@@ -83,6 +83,9 @@ function scrollRight() {
     else updatePage(activepages.left + 1);
 }
 
+document.getElementById('swapper-left').addEventListener('click', scrollLeft);
+document.getElementById('swapper-right').addEventListener('click', scrollRight);
+
 function updatePage(newpage) {
     if (newpage < 1) return;
     if (newpage) {
