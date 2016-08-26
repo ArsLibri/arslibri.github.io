@@ -7,28 +7,57 @@
     background: #FAFAFA;
     box-shadow: 0 0 4px #AEAEAE;
 }
+
 #toolbar-dragger {
     position: absolute;
     left: 275px;
     right: 275px;
     height: 64px;
 }
+
 #toolbar-dragger-line {
     display: inline-block;
-    background: #AEAEAE;
+    background: #EAEAEA;
     position: absolute;
     left: 0;
     right: 0;
     top: 30px;
-    height: 7px;
+    height: 6px;
     box-shadow: 0 0 1px #AEAEAE;
 }
-#toolbar-dragger-anchor {
-    margin-top: -7px;
-    margin-left: -12px;
-    width: 27px;
-    height: 17px;
-    background: #EAEAEA;
-    box-shadow: 0 0 4px #1A1B1C;
-    border-radius: 3px;
+
+#toolbar-dragger-line-loaded {
+    background: #AEAEAE;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0 0 2px #AEAEAE;
+    right: 40%;
+    transition: right 0.25s;
+}
+
+#toolbar-dragger-max-page, #toolbar-dragger-current-page {
+    position: absolute;
+    font-size: 22px;
+    font-family: inherit;
+    background: transparent;
+    top: 0;
+    bottom: 0;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    color: #AEAEAE;
+    border: 0;
+    outline: 0;
+    margin: auto;
+    text-align: center;
+}
+
+#toolbar-dragger-current-page {
+    right: 100%;
+}
+
+#toolbar-dragger-max-page {
+    left: 100%;
 }

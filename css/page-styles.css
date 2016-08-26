@@ -4,30 +4,17 @@
     bottom: 96px;
     left: 0;
     right: 0;
+    margin: auto;
     white-space: nowrap;
 }
 #page-left, #page-right {
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-}
-#page-left {
-    right: 50%;
-}
-#page-right {
-    left: 50%;
-    background-position: left center;
+    height: 100%;
+    width: 50%;
+    display: inline-block;
 }
 #page-left-img, #page-right-img {
     width: 100%;
     height: 100%;
     background-size: contain;
     background-repeat: no-repeat;
-}
-#page-left-img {
-    background-position: right center;
-}
-#page-right-img {
-    background-position: left center;
 }

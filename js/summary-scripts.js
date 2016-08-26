@@ -8,7 +8,7 @@ function addonclicks() {
             pg = pg - (pg + 1) % 2;
             activepages.left = pg;
             activepages.right = pg + 1;
-            updatePage();
+            setPage();
             simulateToggle();
         }
     }
