@@ -34,24 +34,21 @@
 
 .interactive-zone {
     position: absolute;
-    border: solid 2px #AEAEAE;
-    border-style: dashed;
     z-index: 64;
 }
 
-.interactive-zone:hover {
-    background-color: rgba(153, 102, 0, 0.3);
-}
+.interactive-zone:hover {}
 
 .interactive-zone[intType='play'] {
     background-image: url('../var/play.png');
-    background-size: 0px 0px;
+    background-size: 128px 128px;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: background-size 0.25s cubic-bezier(.17, 1.83, .76, .77);
+    transition: background-size 0.25s;
     cursor: pointer;
+    opacity: 0.7;
 }
 
 .interactive-zone[intType='play']:hover {
-    background-size: 128px 128px;
+    opacity: 1;
 }
