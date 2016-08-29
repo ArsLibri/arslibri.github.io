@@ -33,12 +33,7 @@
 }
 
 .pagevideo {
-    opacity: 0;
     position: absolute;
     z-index: 32;
     transition: opacity 0.25s;
-}
-
-.pagevideo:hover {
-    opacity: 1;
 }

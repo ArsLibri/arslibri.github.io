@@ -20,6 +20,7 @@ var DOMpagerightcontent = document.getElementById('page-right-content');
 var DOMpagerightimg = document.getElementById('page-right-img');
 var DOMwrapper = document.getElementById('wrapper');
 var DOMtoolbardraggerlineloaded = document.getElementById('toolbar-dragger-line-loaded');
+var DOMtoolbardraggerline = document.getElementById('toolbar-dragger-line');
 var DOMtoolbardraggercurrentpage = document.getElementById('toolbar-dragger-current-page');
 
 function getPageLink(page) {

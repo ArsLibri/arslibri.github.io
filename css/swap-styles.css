@@ -13,7 +13,7 @@
 }
 
 #swapper-left {
-    left: 0;
+    right: 100%;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 4px 0 4px #AEAEAE;
@@ -21,7 +21,7 @@
 }
 
 #swapper-right {
-    right: 0;
+    left: 100%;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     box-shadow: -4px 0 4px #AEAEAE;
