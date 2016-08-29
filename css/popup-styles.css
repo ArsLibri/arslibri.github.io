@@ -1,0 +1,28 @@
+#popup-wrapper {
+    position: fixed;
+    background-color: rgba(55, 55, 55, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 512;
+    display: none;
+}
+
+#popup-wrapper-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 64px;
+    background: white;
+}
+
+#popup-wrapper-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}

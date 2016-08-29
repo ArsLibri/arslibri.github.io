@@ -32,8 +32,26 @@
     z-index: 8;
 }
 
-.pagevideo {
+.interactive-zone {
     position: absolute;
-    z-index: 32;
-    transition: opacity 0.25s;
+    border: solid 2px #AEAEAE;
+    border-style: dashed;
+    z-index: 64;
+}
+
+.interactive-zone:hover {
+    background-color: rgba(153, 102, 0, 0.3);
+}
+
+.interactive-zone[intType='play'] {
+    background-image: url('../var/play.png');
+    background-size: 0px 0px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: background-size 0.25s cubic-bezier(.17, 1.83, .76, .77);
+    cursor: pointer;
+}
+
+.interactive-zone[intType='play']:hover {
+    background-size: 128px 128px;
 }

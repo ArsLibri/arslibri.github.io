@@ -102,11 +102,8 @@ function setPage(newpage) {
         activepages.right = newpage + 1;
         DOMpageleftimg.style.backgroundImage = getPageLink(activepages.left);
         DOMpagerightimg.style.backgroundImage = getPageLink(activepages.right);
-        if (pageInner[activepages.left]) DOMpageleftcontent.innerHTML = pageInner[activepages.left];
-        else DOMpageleftcontent.innerHTML = '';
-        if (pageInner[activepages.right]) DOMpagerightcontent.innerHTML = pageInner[activepages.right];
-        else DOMpagerightcontent.innerHTML = '';
         DOMtoolbardraggerlineloaded.style.right = (100 - (activepages.right / totalpages) * 100) + '%';
+        DOMpageleftcontent.innerHTML = pageInner[activepages.left];
 
     } else {
         activepages.left = newpage;
