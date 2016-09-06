@@ -12,12 +12,19 @@
     padding: 30px;
     background-color: #FFFFFF;
     overflow-y: auto;
+    z-index: 256;
 }
+
 #summary-title {
     font-family: 'Lato-Regular';
     font-weight: bold;
     font-size: 20px;
 }
+
+.summary-item-h[summarylinkpagecursor="pointer"], .summary-item-l[summarylinkpagecursor="pointer"] {
+    cursor: pointer;
+}
+
 .summary-item-h, .summary-item-l {
     padding: 5.5px 20px;
     margin-left: 10px;
@@ -27,13 +34,17 @@
     background-repeat: no-repeat;
     background-size: 15px auto;
     overflow: hidden;
+    display: table;
 }
+
 .summary-item-h-last {
     background-image: url('../res/summary-item-last.png');
 }
+
 .summary-item-l {
     margin-left: 20px;
 }
+
 .summary-item-l-last {
     background-image: url('../res/summary-item-last.png');
 }

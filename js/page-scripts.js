@@ -29,7 +29,7 @@ function getPageLink(page) {
 
 function resizer() {
 
-    dualpagemode = (DOMwrapper.offsetWidth / (DOMwrapper.offsetHeight - 192)) >= ratio * 2;
+    dualpagemode = ((DOMwrapper.offsetWidth - 80) / (DOMwrapper.offsetHeight - 192)) >= ratio * 2;
 
     if (dualpagemode) {
         if (olddualpagemode == 'toset' || !olddualpagemode) {
