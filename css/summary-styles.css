@@ -34,7 +34,11 @@
     background-repeat: no-repeat;
     background-size: 15px auto;
     overflow: hidden;
-    display: table;
+    position: relative;
+}
+
+.summary-item-h:hover, .summary-item-l:hover {
+    background-color: #EAEAEA;
 }
 
 .summary-item-h-last {
@@ -47,4 +51,15 @@
 
 .summary-item-l-last {
     background-image: url('../res/summary-item-last.png');
+}
+
+.summary-page-number {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    height: 16px;
+    line-height: 16px;
+    color: #000000;
 }

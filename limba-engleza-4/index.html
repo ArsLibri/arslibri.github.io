@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='../css/fonts.css'>
+    <link rel='stylesheet' type='text/css' href='../css/general-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/topbar-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/summary-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/toolbar-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/swap-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/page-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/popup-styles.css'>
+    <link rel='stylesheet' type='text/css' href='../css/video-styles.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <title>Book Viewer Alpha v0.1</title>
+    <script src='js/attached-objects.js'></script>
+</head>
+
+<body>
+    <div id='wrapper'>
+        <div id='top-bar'>
+            <div id='top-bar-title'>Book Dummy</div>
+            <div id='top-bar-toggle'>
+                <div id='top-bar-icon'>
+                    <div id='top-bar-icon-top'></div>
+                    <div id='top-bar-icon-middle'></div>
+                    <div id='top-bar-icon-bottom'></div>
+                </div>
+            </div>
+        </div>
+        <div id='pages-wrapper'>
+            <div id='swapper-left'></div>
+            <div id='swapper-right'></div>
+            <div id='page-left'>
+                <div id='page-left-content'></div>
+                <div id='page-left-img'></div>
+            </div>
+            <div id='page-right'>
+                <div id='page-right-content'></div>
+                <div id='page-right-img'></div>
+            </div>
+        </div>
+        <div id='toolbar'>
+            <div id='toolbar-dragger'>
+                <input type='text' value='1' id='toolbar-dragger-current-page' autocomplete='off'>
+                <div id='toolbar-dragger-line'>
+                    <div id='toolbar-dragger-line-loaded'>
+                    </div>
+                </div>
+                <div id='toolbar-dragger-max-page'></div>
+            </div>
+        </div>
+        <div id='summary'>
+            <!--<div id='summary-title'>Cuprins</div>
+            <div class='summary-item-h summary-link' summarylinkpage='4' summarylinkpagecursor="pointer">Introducere</div>
+            <div class='summary-item-h'>Pagina 1</div>
+            <div class='summary-item-h'>Pagina 1</div>
+            <div class='summary-item-h'>Pagina 1</div>
+            <div class='summary-item-h'>
+                Pagina 1
+                <div class='summary-item-l'>Pagina 1.0</div>
+                <div class='summary-item-l'>Pagina 1.0</div>
+                <div class='summary-item-l summary-item-l-last'>Pagina 1.0</div>
+            </div>
+            <div class='summary-item-h summary-item-h-last'>Pagina 1</div>-->
+        </div>
+    </div>
+    <div id='popup-wrapper'>
+        <div id='popup-wrapper-content'></div>
+        <div id='popup-wrapper-close'>
+
+        </div>
+    </div>
+    <script src='js/variable-holder.js'></script>
+    <script src='js/summary-scripts.js'></script>
+    <script src='../js/topbar-scripts.js'></script>
+    <script src='../js/page-scripts.js'></script>
+    <script src='../js/toolbar-scripts.js'></script>
+    <script src='../js/popup-scripts.js'></script>
+    <script src='js/finisher.js'></script>
+</body>
+
+</html>

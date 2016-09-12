@@ -1,13 +1,13 @@
 var size = {
-    x: 1241,
-    y: 1754
+    x: 1270,
+    y: 1831
 };
 var ratio = size.x / size.y;
 var activepages = {
     left: 1,
     right: 2
 };
-var totalpages = 48;
+var totalpages = 72;
 var dualpagemode = false;
 var olddualpagemode = 'toset';
 
@@ -24,13 +24,13 @@ var DOMtoolbardraggerline = document.getElementById('toolbar-dragger-line');
 var DOMtoolbardraggercurrentpage = document.getElementById('toolbar-dragger-current-page');
 
 function getPageLink(page) {
-    return "url(var/page" + page + ".jpg)";
+    var PageString = page.toString();
+    while (PageString.length < FilePageDigits) PageString = "0" + PageString;
+    return "url('var/" + FilePrefix + PageString + FileSuffix + "')";
 }
 
 function resizer() {
-
     dualpagemode = ((DOMwrapper.offsetWidth - 80) / (DOMwrapper.offsetHeight - 192)) >= ratio * 2;
-
     if (dualpagemode) {
         if (olddualpagemode == 'toset' || !olddualpagemode) {
             DOMpageright.style.display = 'inline-block';
@@ -100,10 +100,10 @@ function setPage(newpage) {
         newpage = newpage - (newpage + 1) % 2;
         activepages.left = newpage;
         activepages.right = newpage + 1;
+        console.log(getPageLink(activepages.left));
         DOMpageleftimg.style.backgroundImage = getPageLink(activepages.left);
         DOMpagerightimg.style.backgroundImage = getPageLink(activepages.right);
         DOMtoolbardraggerlineloaded.style.right = (100 - (activepages.right / totalpages) * 100) + '%';
-        DOMpageleftcontent.innerHTML = pageInner[activepages.left];
 
     } else {
         activepages.left = newpage;
@@ -114,5 +114,4 @@ function setPage(newpage) {
 
     }
     DOMtoolbardraggercurrentpage.value = activepages.left;
-
 }

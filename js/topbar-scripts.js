@@ -1,6 +1,7 @@
 var menutoggled = false;
 var currentpage = 1;
 
+var DOMtopbartitle = document.getElementById('top-bar-title');
 var DOMtopbartoggle = document.getElementById('top-bar-toggle');
 var DOMsummary = document.getElementById('summary');
 var DOMtopbartoggletop = document.getElementById('top-bar-icon-top');
@@ -41,6 +42,10 @@ function simulateToggle() {
             });
         }
     }
+}
+
+function loadTitle() {
+    DOMtopbartitle.innerHTML = BookTitle;
 }
 
 DOMtopbartoggle.onclick = function() {
