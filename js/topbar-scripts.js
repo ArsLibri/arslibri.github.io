@@ -1,7 +1,6 @@
-var menutoggled = false;
-var currentpage = 1;
+var MenuToggled = false;
+var CurrentPage = 1;
 
-var DOMtopbartitle = document.getElementById('top-bar-title');
 var DOMtopbartoggle = document.getElementById('top-bar-toggle');
 var DOMsummary = document.getElementById('summary');
 var DOMtopbartoggletop = document.getElementById('top-bar-icon-top');
@@ -9,9 +8,9 @@ var DOMtopbartogglemiddle = document.getElementById('top-bar-icon-middle');
 var DOMtopbartogglebottom = document.getElementById('top-bar-icon-bottom');
 
 function simulateToggle() {
-    menutoggled = !menutoggled;
-    DOMsummary.style.left = (100 * !menutoggled) + '%';
-    if (menutoggled) {
+    MenuToggled = !MenuToggled;
+    DOMsummary.style.left = (100 * !MenuToggled) + '%';
+    if (MenuToggled) {
         TweenLite.to(DOMtopbartoggletop, 0.25, {
             transform: "rotate(45deg)",
             width: '25.612px',

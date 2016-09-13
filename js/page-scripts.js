@@ -1,61 +1,38 @@
-var size = {
-    x: 1270,
-    y: 1831
-};
-var ratio = size.x / size.y;
-var activepages = {
+var Ratio = PageSizePX.x / PageSizePX.y;
+var ActivePages = {
     left: 1,
     right: 2
 };
-var totalpages = 72;
-var dualpagemode = false;
-var olddualpagemode = 'toset';
+var DualPageMode = false;
+var OldDualPageMode = 'toset';
 
-var DOMpageleft = document.getElementById('page-left');
-var DOMpageright = document.getElementById('page-right');
-var DOMpageswrapper = document.getElementById('pages-wrapper');
-var DOMpageleftimg = document.getElementById('page-left-img');
-var DOMpageleftcontent = document.getElementById('page-left-content');
-var DOMpagerightcontent = document.getElementById('page-right-content');
-var DOMpagerightimg = document.getElementById('page-right-img');
-var DOMwrapper = document.getElementById('wrapper');
-var DOMtoolbardraggerlineloaded = document.getElementById('toolbar-dragger-line-loaded');
-var DOMtoolbardraggerline = document.getElementById('toolbar-dragger-line');
-var DOMtoolbardraggercurrentpage = document.getElementById('toolbar-dragger-current-page');
-
-function getPageLink(page) {
-    var PageString = page.toString();
+function getPageLink(Page) {
+    var PageString = Page.toString();
     while (PageString.length < FilePageDigits) PageString = "0" + PageString;
     return "url('var/" + FilePrefix + PageString + FileSuffix + "')";
 }
 
 function resizer() {
-    dualpagemode = ((DOMwrapper.offsetWidth - 80) / (DOMwrapper.offsetHeight - 192)) >= ratio * 2;
-    if (dualpagemode) {
-        if (olddualpagemode == 'toset' || !olddualpagemode) {
+    DualPageMode = ((DOMwrapper.offsetWidth - 80) / (DOMwrapper.offsetHeight - 192)) >= Ratio * 2;
+    if (DualPageMode) {
+        if (OldDualPageMode == 'toset' || !OldDualPageMode) {
             DOMpageright.style.display = 'inline-block';
             DOMpageleft.style.width = '50%';
-            setPage(activepages.left);
+            setPage(ActivePages.left);
         }
-        DOMpageswrapper.style.width = 2 * ratio * DOMpageswrapper.offsetHeight + 'px';
+        DOMpageswrapper.style.width = 2 * Ratio * DOMpageswrapper.offsetHeight + 'px';
     } else {
-        if (olddualpagemode == 'toset' || olddualpagemode) {
+        if (OldDualPageMode == 'toset' || OldDualPageMode) {
             DOMpageright.style.display = 'none';
             DOMpageleft.style.width = '100%';
-            setPage(activepages.left);
+            setPage(ActivePages.left);
         }
-        DOMpageswrapper.style.width = ratio * DOMpageswrapper.offsetHeight + 'px';
+        DOMpageswrapper.style.width = Ratio * DOMpageswrapper.offsetHeight + 'px';
     }
-    olddualpagemode = dualpagemode;
+    OldDualPageMode = DualPageMode;
 }
 
-window.addEventListener('resize', function() {
-    resizer();
-});
-DOMtoolbardraggercurrentpage.addEventListener('blur', function() {
-    setPage(parseInt(DOMtoolbardraggercurrentpage.value));
-});
-document.addEventListener('keydown', function(e) {
+function handleKey(e) {
     e = e || window.event;
     switch (e.keyCode) {
         case '37': //left
@@ -77,41 +54,41 @@ document.addEventListener('keydown', function(e) {
         case 13:
             if (document.activeElement === DOMtoolbardraggercurrentpage) setPage(parseInt(DOMtoolbardraggercurrentpage.value));
             break;
-
     }
-});
+}
 
 function scrollLeft() {
-    if (dualpagemode) setPage(activepages.left - 2);
-    else setPage(activepages.left - 1);
+    if (DualPageMode) setPage(ActivePages.left - 2);
+    else setPage(ActivePages.left - 1);
 }
 
 function scrollRight() {
-    if (dualpagemode) setPage(activepages.left + 2);
-    else setPage(activepages.left + 1);
+    if (DualPageMode) setPage(ActivePages.left + 2);
+    else setPage(ActivePages.left + 1);
 }
 
-document.getElementById('swapper-left').addEventListener('click', scrollLeft);
-document.getElementById('swapper-right').addEventListener('click', scrollRight);
-
-function setPage(newpage) {
-    if (newpage < 1 || newpage > totalpages) return;
-    if (dualpagemode) {
-        newpage = newpage - (newpage + 1) % 2;
-        activepages.left = newpage;
-        activepages.right = newpage + 1;
-        console.log(getPageLink(activepages.left));
-        DOMpageleftimg.style.backgroundImage = getPageLink(activepages.left);
-        DOMpagerightimg.style.backgroundImage = getPageLink(activepages.right);
-        DOMtoolbardraggerlineloaded.style.right = (100 - (activepages.right / totalpages) * 100) + '%';
+function setPage(NewPage) {
+    if (NewPage < 1 || NewPage > PageNumber) return;
+    if (DualPageMode) {
+        NewPage = NewPage - ((NewPage + 1) % 2);
+        ActivePages.left = NewPage;
+        ActivePages.right = NewPage + 1;
+        DOMpageleftimg.style.backgroundImage = getPageLink(ActivePages.left);
+        DOMpagerightimg.style.backgroundImage = getPageLink(ActivePages.right);
+        DOMtoolbardraggerlineloaded.style.right = (100 - (ActivePages.right / PageNumber) * 100) + '%';
+        if (PagesARR[ActivePages.left] != undefined) DOMpageleftcontent.innerHTML = PagesARR[ActivePages.left];
+        else DOMpageleftcontent.innerHTML = "";
+        if (PagesARR[ActivePages.right] != undefined) DOMpageleftcontent.innerHTML = PagesARR[ActivePages.right];
+        else DOMpageleftcontent.innerHTML = "";
 
     } else {
-        activepages.left = newpage;
-        activepages.right = newpage + 1;
-        DOMpageleftimg.style.backgroundImage = getPageLink(activepages.left);
-        DOMpagerightimg.style.backgroundImage = getPageLink(activepages.right);
-        DOMtoolbardraggerlineloaded.style.right = (100 - (activepages.left / totalpages) * 100) + '%';
-
+        ActivePages.left = NewPage;
+        ActivePages.right = NewPage + 1;
+        DOMpageleftimg.style.backgroundImage = getPageLink(ActivePages.left);
+        DOMpagerightimg.style.backgroundImage = getPageLink(ActivePages.right);
+        DOMtoolbardraggerlineloaded.style.right = (100 - (ActivePages.left / PageNumber) * 100) + '%';
+        if (PagesARR[ActivePages.left] != undefined) DOMpageleftcontent.innerHTML = PagesARR[ActivePages.left];
+        else DOMpageleftcontent.innerHTML = "";
     }
-    DOMtoolbardraggercurrentpage.value = activepages.left;
+    DOMtoolbardraggercurrentpage.value = ActivePages.left;
 }

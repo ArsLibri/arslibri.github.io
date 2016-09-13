@@ -4,11 +4,12 @@
     left: 0;
     right: 0;
     height: 64px;
-    background: #FAFAFA;
+    background: #a6b816;
     transition: top 0.25s;
     white-space: nowrap;
     box-shadow: 0 0 4px #AEAEAE;
 }
+
 #top-bar-toggle {
     position: absolute;
     right: 0;
@@ -17,6 +18,7 @@
     height: 64px;
     cursor: pointer;
 }
+
 #top-bar-icon {
     position: absolute;
     top: 16px;
@@ -24,8 +26,9 @@
     right: 16px;
     bottom: 16px;
 }
+
 #top-bar-icon-top, #top-bar-icon-middle, #top-bar-icon-bottom {
-    background: #AEAEAE;
+    background: #FAFAFA;
     height: 2px;
     left: 6px;
     width: 20px;
@@ -34,22 +37,28 @@
     -ms-transform-origin: left center;
     transform-origin: left center;
 }
+
 #top-bar-icon-top {
     top: 8px;
 }
+
 #top-bar-icon-middle {
     top: 15px;
 }
+
 #top-bar-icon-bottom {
     top: 22px;
 }
+
 #top-bar-title {
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 52px;
     height: 64px;
     line-height: 64px;
-    color: #1A1B1C;
+    color: #FAFAFA;
     font-size: 20px;
     padding-left: 22px;
+    overflow: hidden;
 }
